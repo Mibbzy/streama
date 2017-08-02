@@ -107,3 +107,25 @@ If you want to use paypal, use this link https://www.paypal.me/dularion
 # License
 Streama is distributed under the terms of the MIT license.
 See [LICENSE.md](https://github.com/dularion/streama/blob/master/LICENSE.md) for details.
+
+# Setup
+Step 1 - Java
+If you don't have it already, go ahead and download a copy of JDK8 (Oracle) and install JDK as usual, make sure to let JDK add new variables to your system.
+
+
+Step 2 - Download the executable & config
+Download the most recent .war file in the releases page. 
+wget https://github.com/dularion/streama/releases/download/v1.0.11/streama-1.0.11.war -O streama.war
+Make executable for user: 
+sudo chmod u+x streama.war
+download the sample_application.yml as application.yml and place it in the same directory as the war file. 
+wget https://raw.githubusercontent.com/dularion/streama/master/docs/sample_application.yml -O application.yml
+
+Step 3 - Run the application
+open your command line tool
+on a unix-system (Ubuntu, Mac, etc), run ./streama.war
+on Windows (untested), run streama.war
+This command will run the application in an embedded server against a local database http://localhost:8080
+
+Step 4 - Login
+the first thing you will see when opening the URL is a login screen. Use username admin and password admin to log in. Enjoy
